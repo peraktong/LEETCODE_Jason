@@ -1,0 +1,4 @@
+/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/Users/caojunzhi/Library/Mobile Documents/com~apple~CloudDocs/Leetcode/Remove Duplicates from Sorted Array"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/caojunzhi/Library/Mobile Documents/com~apple~CloudDocs/Leetcode/Remove Duplicates from Sorted Array/cmake-build-debug
