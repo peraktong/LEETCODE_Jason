@@ -1,0 +1,72 @@
+// you
+can
+use
+includes,
+for example:
+    //  # include <algorithm>
+
+    // you
+    can
+    write
+    to
+    stdout
+    for debugging purposes, e.g.
+        // cout << "this is a debug message" << endl;
+    # include <vector>
+    # include <string>
+
+    string
+    solution(int
+    A, int
+    B, int
+    C) {
+       // write
+    your
+    code in C + +14(g + + 6.2
+    .0)
+    // std:;
+    string
+    s = "0";
+    // map < string, int > dict;
+    // for (int i=0)
+
+    int m=std::
+        max({A, B, C});
+    m = m % 2 + m / 2;
+    std::vector < std::string > ans("", m);
+    int
+    j = 0;
+    int
+    m2 = 3 * m - 2 - 2 * (A + B + C);
+    for (int i=0;i < A;++i)
+    {
+        ans[j % m]+= "a";
+    j++;
+    }
+
+    for (int i=0;i < B;++i)
+    {
+    ans[j % m] += "b";
+    j++;
+    }
+
+    for (int i=0;i < C;++i)
+    {
+    ans[j % m] += "c";
+    j++;
+    }
+    std::
+        string
+    res;
+
+    for (int i=0;i < m;++i)
+    {
+        res+= ans[i];
+    }
+
+    if (m2 > 0)
+    return res.substr(0, res.size() - m2);
+    else
+    return res;
+
+    }
