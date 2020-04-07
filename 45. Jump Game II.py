@@ -1,17 +1,23 @@
-class Solution(object):
-    def jump(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
-        # BFS?:
-        n, start, end, step = len(nums), 0, 0, 0
-        while end < n - 1:
-            step += 1
-            maxend = end + 1
-            for i in range(start, end + 1):
-                if i + nums[i] >= n - 1:
-                    return step
-                maxend = max(maxend, i + nums[i])
-            start, end = end + 1, maxend
-        return step
+class Solution:
+    def jump(self, nums: List[int]) -> int:
+        # greedy:
+        n = len(nums)
+        if n < 2:
+            return 0
+
+        # we remember the max position each point can reach:
+        max_pos = nums[0]
+        max_step = nums[0]
+        ans = 1
+        for i in range(1, n):
+
+            if max_step < i:
+                # This means we  still need more steps to reach this point:
+                ans += 1
+                max_step = max_pos
+            max_pos = max(max_pos, nums[i] + i)
+        return ans
+
+
+
+
